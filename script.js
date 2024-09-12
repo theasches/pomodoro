@@ -18,7 +18,7 @@ function startTimer() {
     if (!isRunning) {
         const minutes = parseInt(minutesInput.value) || 0;
         const seconds = parseInt(secondsInput.value) || 0;
-        timeLeft = minutes * 60 + seconds;
+        timeLeft = (minutes * 60) + seconds; // Update timeLeft with input values
         updateDisplay();
 
         isRunning = true;
@@ -48,4 +48,4 @@ startButton.addEventListener('click', startTimer);
 resetButton.addEventListener('click', resetTimer);
 
 updateDisplay();
-            
+        
