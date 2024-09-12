@@ -5,6 +5,7 @@ let timeLeft = 1800; // Default to 30 minutes in seconds
 const timerDisplay = document.getElementById('timer');
 const startButton = document.getElementById('start');
 const resetButton = document.getElementById('reset');
+const themeToggleButton = document.getElementById('theme-toggle');
 const minutesInput = document.getElementById('minutes');
 const secondsInput = document.getElementById('seconds');
 const loadingBar = document.getElementById('loading-bar');
@@ -53,8 +54,12 @@ function resetTimer() {
     loadingBar.style.width = '0'; // Reset loading bar
 }
 
+function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+}
+
 startButton.addEventListener('click', startTimer);
 resetButton.addEventListener('click', resetTimer);
+themeToggleButton.addEventListener('click', toggleTheme);
 
 updateDisplay();
-                
