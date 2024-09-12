@@ -3,26 +3,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: black; /* Changed background color to black */
     font-family: 'Arial', sans-serif;
-}
-
-body.dark-mode {
-    background-color: #333;
-    color: #f4f4f4;
+    color: white; /* Changed text color to white for better visibility */
 }
 
 .container {
     text-align: center;
-    background: white;
+    background: #333; /* Dark background for the container */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-body.dark-mode .container {
-    background: #444;
-    color: #f4f4f4;
 }
 
 h1 {
@@ -33,13 +24,10 @@ h1 {
 #timer {
     font-size: 3em;
     margin: 20px 0;
-    background-color: #d3d3d3;
+    background-color: #444; /* Dark background for the timer */
     padding: 10px;
     border-radius: 5px;
-}
-
-body.dark-mode #timer {
-    background-color: #666;
+    color: white; /* Changed text color to white for better visibility */
 }
 
 .inputs {
@@ -48,6 +36,7 @@ body.dark-mode #timer {
 
 .inputs label {
     margin-right: 10px;
+    color: white; /* Changed text color to white for better visibility */
 }
 
 .inputs input {
@@ -58,12 +47,8 @@ body.dark-mode #timer {
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-body.dark-mode .inputs input {
-    background-color: #555;
-    color: #f4f4f4;
-    border: 1px solid #888;
+    background-color: #555; /* Dark background for the input fields */
+    color: white; /* Changed text color to white for better visibility */
 }
 
 .buttons {
@@ -86,13 +71,9 @@ button:hover {
     background-color: #0056b3;
 }
 
-body.dark-mode button {
-    background-color: #0056b3;
-}
-
 #loading-bar-container {
     width: 100%;
-    background-color: #f3f3f3;
+    background-color: #555; /* Dark background for the loading bar container */
     border-radius: 5px;
     margin-top: 20px;
     overflow: hidden;
@@ -103,8 +84,4 @@ body.dark-mode button {
     height: 10px;
     background-color: #007BFF;
     transition: width 1s linear;
-}
-
-body.dark-mode #loading-bar-container {
-    background-color: #555;
 }
