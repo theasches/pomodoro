@@ -21,29 +21,6 @@ function startTimer() {
                 updateDisplay();
             } else {
                 clearInterval(timer);
-let timer;
-let isRunning = false;
-let timeLeft = 1500; // 25 minutes in seconds
-
-const timeDisplay = document.getElementById('time');
-const startButton = document.getElementById('start');
-const resetButton = document.getElementById('reset');
-
-function updateDisplay() {
-    const minutes = Math.floor(timeLeft / 60);
-    const seconds = timeLeft % 60;
-    timeDisplay.textContent = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-}
-
-function startTimer() {
-    if (!isRunning) {
-        isRunning = true;
-        timer = setInterval(() => {
-            if (timeLeft > 0) {
-                timeLeft--;
-                updateDisplay();
-            } else {
-                clearInterval(timer);
                 isRunning = false;
                 alert('Time is up!');
             }
