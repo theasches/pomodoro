@@ -3,14 +3,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: black; /* Changed background color to black */
+    background-color: #f4f4f4;
     font-family: 'Arial', sans-serif;
-    color: white; /* Changed text color to white for better visibility */
 }
 
 .container {
     text-align: center;
-    background: #333; /* Dark background for the container */
+    background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -24,10 +23,9 @@ h1 {
 #timer {
     font-size: 3em;
     margin: 20px 0;
-    background-color: #444; /* Dark background for the timer */
+    background-color: #d3d3d3;
     padding: 10px;
     border-radius: 5px;
-    color: white; /* Changed text color to white for better visibility */
 }
 
 .inputs {
@@ -36,7 +34,6 @@ h1 {
 
 .inputs label {
     margin-right: 10px;
-    color: white; /* Changed text color to white for better visibility */
 }
 
 .inputs input {
@@ -47,8 +44,6 @@ h1 {
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #555; /* Dark background for the input fields */
-    color: white; /* Changed text color to white for better visibility */
 }
 
 .buttons {
@@ -73,7 +68,7 @@ button:hover {
 
 #loading-bar-container {
     width: 100%;
-    background-color: #555; /* Dark background for the loading bar container */
+    background-color: #f3f3f3;
     border-radius: 5px;
     margin-top: 20px;
     overflow: hidden;
