@@ -48,3 +48,10 @@ startButton.addEventListener('click', startTimer);
 resetButton.addEventListener('click', resetTimer);
 
 updateDisplay();
+
+// Hide loading screen once the page has loaded
+window.addEventListener('load', () => {
+    document.getElementById('loading-screen').style.display = 'none';
+    document.querySelector('.container').style.display = 'block';
+});
+        
