@@ -7,7 +7,7 @@ const startButton = document.getElementById('start');
 const resetButton = document.getElementById('reset');
 const minutesInput = document.getElementById('minutes');
 const secondsInput = document.getElementById('seconds');
-const loadingScreen = document.getElementById('loading-screen');
+const loadingBar = document.getElementById('loading-bar');
 
 function updateDisplay() {
     const minutes = Math.floor(timeLeft / 60);
@@ -22,22 +22,24 @@ function startTimer() {
         timeLeft = (minutes * 60) + seconds; // Update timeLeft with input values
         updateDisplay();
 
-        // Show loading screen
-        loadingScreen.style.display = 'flex';
-        setTimeout(() => {
-            loadingScreen.style.display = 'none';
-            isRunning = true;
-            timer = setInterval(() => {
-                if (timeLeft > 0) {
-                    timeLeft--;
-                    updateDisplay();
-                } else {
-                    clearInterval(timer);
-                    isRunning = false;
-                    alert('Time is up!');
-                }
-            }, 1000);
-        }, 3000); // 3 seconds loading time
+        // Reset loading bar
+        loadingBar.style.width = '0';
+        const totalDuration = timeLeft;
+        
+        isRunning = true;
+        timer = setInterval(() => {
+            if (timeLeft > 0) {
+                timeLeft--;
+                updateDisplay();
+                // Update loading bar
+                const progress = ((totalDuration - timeLeft) / totalDuration) * 100;
+                loadingBar.style.width = `${progress}%`;
+            } else {
+                clearInterval(timer);
+                isRunning = false;
+                alert('Time is up!');
+            }
+        }, 1000);
     }
 }
 
@@ -48,10 +50,11 @@ function resetTimer() {
     minutesInput.value = '30';
     secondsInput.value = '0';
     updateDisplay();
+    loadingBar.style.width = '0'; // Reset loading bar
 }
 
 startButton.addEventListener('click', startTimer);
 resetButton.addEventListener('click', resetTimer);
 
 updateDisplay();
-                                
+            
