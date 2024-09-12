@@ -37,7 +37,7 @@ h1 {
 }
 
 .inputs input {
-    width: 60px; /* Reduced width */
+    width: 50px; /* Reduced width */
     padding: 5px; /* Reduced padding */
     margin: 5px;
     font-size: 1em;
