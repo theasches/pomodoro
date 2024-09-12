@@ -23,10 +23,17 @@ h1 {
 #timer {
     font-size: 3em;
     margin: 20px 0;
+    background-color: #d3d3d3;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .inputs {
     margin: 20px 0;
+}
+
+.inputs label {
+    margin-right: 10px;
 }
 
 .inputs input {
@@ -57,4 +64,4 @@ button {
 
 button:hover {
     background-color: #0056b3;
-        }
+}
