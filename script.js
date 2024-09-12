@@ -1,6 +1,6 @@
 let timer;
 let isRunning = false;
-let timeLeft = 1500; // Default to 25 minutes in seconds
+let timeLeft = 1800; // Default to 30 minutes in seconds
 
 const timerDisplay = document.getElementById('timer');
 const startButton = document.getElementById('start');
@@ -38,9 +38,9 @@ function startTimer() {
 function resetTimer() {
     clearInterval(timer);
     isRunning = false;
-    timeLeft = 1500; // Reset to default 25 minutes
-    minutesInput.value = '';
-    secondsInput.value = '';
+    timeLeft = 1800; // Reset to default 30 minutes
+    minutesInput.value = '30';
+    secondsInput.value = '0';
     updateDisplay();
 }
 
@@ -48,4 +48,3 @@ startButton.addEventListener('click', startTimer);
 resetButton.addEventListener('click', resetTimer);
 
 updateDisplay();
-        
