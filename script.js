@@ -57,4 +57,4 @@ startButton.addEventListener('click', startTimer);
 resetButton.addEventListener('click', resetTimer);
 
 updateDisplay();
-            
+                
