@@ -9,6 +9,9 @@ const minutesInput = document.getElementById('minutes');
 const secondsInput = document.getElementById('seconds');
 const loadingBar = document.getElementById('loading-bar');
 
+// Create an audio object
+const alertSound = new Audio('alert.mp3');
+
 function updateDisplay() {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
@@ -37,6 +40,7 @@ function startTimer() {
             } else {
                 clearInterval(timer);
                 isRunning = false;
+                alertSound.play(); // Play the alert sound
                 alert('Time is up!');
             }
         }, 1000);
